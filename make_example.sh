@@ -1,7 +1,13 @@
 #!/bin/sh
 
 EXAMPLE=$1
-EDITOR=$2
+
+
+if [ -z "$2" ]; then
+    EDITOR=/home/tellez/.local/bin/nvim.appimage
+else
+    EDITOR=$2
+fi
 
 mkdir src/$EXAMPLE
 cd src/$EXAMPLE
